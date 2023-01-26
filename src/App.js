@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { Amplify } from "aws-amplify";
 
-function App() {
+import { withAuthenticator } from "@aws-amplify/ui-react";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
+import { SignInHeader } from "./SignInHeader";
+import { SignInFooter } from "./SignInFooter";
+import "./styles.css";
+
+import awsExports from "./aws-exports";
+Amplify.configure(awsExports);
+
+export function App({ signOut, user }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <h1>Hello {user.username}</h1>
+      <button onClick={signOut}>Sign out</button>
+    </main>
   );
 }
 
-export default App;
+export default withAuthenticator(App, {
+  components: {
+    Header,
+    SignIn: {
+      Header: SignInHeader,
+      Footer: SignInFooter
+    },
+    Footer
+  }
+});
