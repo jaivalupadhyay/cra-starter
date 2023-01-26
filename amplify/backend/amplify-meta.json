@@ -14,20 +14,13 @@
   },
   "auth": {
     "project": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
       "customAuth": false,
+      "dependsOn": [],
       "frontendAuthConfig": {
-        "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL"
-        ],
-        "signupAttributes": [
-          "EMAIL",
-          "NAME",
-          "PHONE_NUMBER",
-          "BIRTHDATE"
+        "mfaConfiguration": "OPTIONAL",
+        "mfaTypes": [
+          "SMS",
+          "TOTP"
         ],
         "passwordProtectionSettings": {
           "passwordPolicyMinLength": 8,
@@ -38,20 +31,22 @@
             "REQUIRES_UPPERCASE"
           ]
         },
-        "mfaConfiguration": "OPTIONAL",
-        "mfaTypes": [
-          "SMS",
-          "TOTP"
+        "signupAttributes": [
+          "EMAIL",
+          "NAME",
+          "PHONE_NUMBER",
+          "BIRTHDATE"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
         ],
         "verificationMechanisms": [
           "PHONE_NUMBER"
         ]
       },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyd2213c989a874-staging-113742-deployment/amplify-cfn-templates/auth/project-cloudformation-template.json",
-        "logicalId": "authproject"
-      },
-      "lastPushTimeStamp": "2023-01-26T11:46:26.370Z",
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
       "output": {
         "CreatedSNSRole": "arn:aws:iam::005225489735:role/snsd0ba67cd113742-staging",
         "UserPoolId": "us-east-1_SPlQaWDaV",
@@ -62,7 +57,11 @@
         "IdentityPoolName": "testAuthIdentityPool__staging",
         "UserPoolName": "project"
       },
-      "lastPushDirHash": "JITx36LkhwpvHl2rEhkZ1+2Ye3I="
+      "lastPushTimeStamp": "2023-01-26T11:49:36.946Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyd2213c989a874-staging-113742-deployment/amplify-cfn-templates/auth/project-cloudformation-template.json",
+        "logicalId": "authproject"
+      }
     }
   }
 }

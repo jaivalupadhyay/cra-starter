@@ -3,36 +3,20 @@
 
 const awsmobile = {
     "aws_project_region": "us-east-1",
-    "aws_cognito_identity_pool_id": "us-east-1:b7ae16a1-93d6-4150-ac59-62381b80ac29",
+    "aws_cognito_identity_pool_id": "us-east-1:35a469d6-2856-4b21-84c5-a22fdcc1a65d",
     "aws_cognito_region": "us-east-1",
-    "aws_user_pools_id": "us-east-1_YtzRxRfq9",
-    "aws_user_pools_web_client_id": "1g2u5ropjo1orr4u3385u19cgj",
-    "oauth": {
-        "domain": "aytj817mnyri-staging.auth.us-east-1.amazoncognito.com",
-        "scope": [
-            "phone",
-            "email",
-            "openid",
-            "profile",
-            "aws.cognito.signin.user.admin"
-        ],
-        "redirectSignIn": "https://start.d8ng0hxtgadd9.amplifyapp.com/",
-        "redirectSignOut": "https://start.d8ng0hxtgadd9.amplifyapp.com/",
-        "responseType": "code"
-    },
-    "federationTarget": "COGNITO_USER_POOLS",
+    "aws_user_pools_id": "us-east-1_SPlQaWDaV",
+    "aws_user_pools_web_client_id": "59fbj6v7g31eifhf278gkn0nme",
+    "oauth": {},
     "aws_cognito_username_attributes": [
         "EMAIL"
     ],
-    "aws_cognito_social_providers": [
-        "GOOGLE"
-    ],
+    "aws_cognito_social_providers": [],
     "aws_cognito_signup_attributes": [
-        "GENDER",
         "EMAIL",
-        "BIRTHDATE",
         "NAME",
-        "PHONE_NUMBER"
+        "PHONE_NUMBER",
+        "BIRTHDATE"
     ],
     "aws_cognito_mfa_configuration": "OPTIONAL",
     "aws_cognito_mfa_types": [
@@ -49,7 +33,7 @@ const awsmobile = {
         ]
     },
     "aws_cognito_verification_mechanisms": [
-        "EMAIL"
+        "PHONE_NUMBER"
     ]
 };
 
