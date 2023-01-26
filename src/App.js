@@ -7,6 +7,7 @@ import React from 'react';
 Amplify.configure(awsExports);
 
 
+
 function App({ signOut, user }) {
   return (
     <div>
