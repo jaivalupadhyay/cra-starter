@@ -19,18 +19,15 @@
       "dependsOn": [],
       "customAuth": false,
       "frontendAuthConfig": {
-        "socialProviders": [
-          "GOOGLE"
-        ],
+        "socialProviders": [],
         "usernameAttributes": [
           "EMAIL"
         ],
         "signupAttributes": [
-          "GENDER",
           "EMAIL",
+          "PHONE_NUMBER",
           "BIRTHDATE",
-          "NAME",
-          "PHONE_NUMBER"
+          "NAME"
         ],
         "passwordProtectionSettings": {
           "passwordPolicyMinLength": 8,
@@ -47,27 +44,25 @@
           "TOTP"
         ],
         "verificationMechanisms": [
-          "EMAIL"
+          "PHONE_NUMBER"
         ]
       },
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifybcb9f86f6c184-staging-95949-deployment/amplify-cfn-templates/auth/project-cloudformation-template.json",
         "logicalId": "authproject"
       },
-      "lastPushTimeStamp": "2023-01-26T10:08:15.036Z",
+      "lastPushTimeStamp": "2023-01-26T11:19:44.751Z",
       "output": {
-        "CreatedSNSRole": "arn:aws:iam::005225489735:role/sns31b9d2b795949-staging",
-        "UserPoolId": "us-east-1_YtzRxRfq9",
-        "AppClientIDWeb": "1g2u5ropjo1orr4u3385u19cgj",
-        "AppClientID": "5gkugh5567doaci6cb6nmse5bv",
-        "HostedUIDomain": "aytj817mnyri-staging",
-        "IdentityPoolId": "us-east-1:b7ae16a1-93d6-4150-ac59-62381b80ac29",
-        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:005225489735:userpool/us-east-1_YtzRxRfq9",
+        "CreatedSNSRole": "arn:aws:iam::005225489735:role/sns40dd079795949-staging",
+        "UserPoolId": "us-east-1_h7ksjwVHM",
+        "AppClientIDWeb": "6t3vmkh94bgl119cecjch0nov1",
+        "AppClientID": "5bs41bcskp1acpd15r65v1bbsk",
+        "IdentityPoolId": "us-east-1:dce2118b-2981-45ab-9be6-e4cef4bb3a21",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:005225489735:userpool/us-east-1_h7ksjwVHM",
         "IdentityPoolName": "testAuthIdentityPool__staging",
-        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://start.d8ng0hxtgadd9.amplifyapp.com/\"],\"LogoutURLs\":[\"https://start.d8ng0hxtgadd9.amplifyapp.com/\"]}",
         "UserPoolName": "project"
       },
-      "lastPushDirHash": "MdSX8KyctiFg8uw2gaP+WwucSgo="
+      "lastPushDirHash": "BRmnXsQpyytSV4PBYgGcTqgcsWM="
     }
   }
 }

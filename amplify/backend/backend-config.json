@@ -19,20 +19,17 @@
           "passwordPolicyMinLength": 8
         },
         "signupAttributes": [
-          "GENDER",
           "EMAIL",
+          "PHONE_NUMBER",
           "BIRTHDATE",
-          "NAME",
-          "PHONE_NUMBER"
+          "NAME"
         ],
-        "socialProviders": [
-          "GOOGLE"
-        ],
+        "socialProviders": [],
         "usernameAttributes": [
           "EMAIL"
         ],
         "verificationMechanisms": [
-          "EMAIL"
+          "PHONE_NUMBER"
         ]
       },
       "providerPlugin": "awscloudformation",

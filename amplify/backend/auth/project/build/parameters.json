@@ -1,10 +1,10 @@
 {
   "identityPoolName": "testAuthIdentityPool",
   "allowUnauthenticatedIdentities": false,
-  "resourceNameTruncated": "projec31b9d2b7",
+  "resourceNameTruncated": "projec40dd0797",
   "userPoolName": "project",
   "autoVerifiedAttributes": [
-    "email"
+    "phone_number"
   ],
   "mfaConfiguration": "OPTIONAL",
   "mfaTypes": [
@@ -12,9 +12,9 @@
     "TOTP"
   ],
   "smsAuthenticationMessage": "Your login code is {####}",
-  "smsVerificationMessage": "Your verification code is {####}",
-  "emailVerificationSubject": "Verification code: {####}",
-  "emailVerificationMessage": "Verification code: {####}",
+  "smsVerificationMessage": "Verification code: {####}",
+  "emailVerificationSubject": "Your verification code",
+  "emailVerificationMessage": "Your verification code is {####}",
   "defaultPasswordPolicy": false,
   "passwordPolicyMinLength": 8,
   "passwordPolicyCharacters": [
@@ -24,25 +24,25 @@
     "Requires Uppercase"
   ],
   "requiredAttributes": [
-    "gender",
     "email",
+    "phone_number",
     "birthdate",
-    "name",
-    "phone_number"
+    "name"
   ],
   "aliasAttributes": [],
   "userpoolClientGenerateSecret": false,
   "userpoolClientRefreshTokenValidity": 30,
   "userpoolClientWriteAttributes": [],
   "userpoolClientReadAttributes": [],
-  "userpoolClientLambdaRole": "projec31b9d2b7_userpoolclient_lambda_role",
+  "userpoolClientLambdaRole": "projec40dd0797_userpoolclient_lambda_role",
   "userpoolClientSetAttributes": false,
-  "sharedId": "31b9d2b7",
+  "sharedId": "40dd0797",
   "resourceName": "project",
   "authSelections": "identityPoolAndUserPool",
   "serviceName": "Cognito",
   "usernameAttributes": [
-    "email"
+    "email",
+    "phone_number"
   ],
   "useDefault": "manual",
   "userPoolGroups": false,
@@ -50,13 +50,6 @@
   "adminQueries": false,
   "thirdPartyAuth": false,
   "authProviders": [],
-  "hostedUI": true,
-  "hostedUIDomainName": "aytj817mnyri",
-  "authProvidersUserPool": [
-    "Google"
-  ],
-  "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid profile email\",\"AttributeMapping\":{\"gender\":\"genders\",\"email\":\"email\",\"birthdate\":\"birthdays\",\"name\":\"name\",\"phone_number\":\"phoneNumbers\",\"username\":\"sub\"}}]",
-  "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://start.d8ng0hxtgadd9.amplifyapp.com/\"],\"LogoutURLs\":[\"https://start.d8ng0hxtgadd9.amplifyapp.com/\"]}",
   "usernameCaseSensitive": false,
   "useEnabledMfas": true,
   "authRoleArn": {
