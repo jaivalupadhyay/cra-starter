@@ -3,7 +3,7 @@
   "cognitoConfig": {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "projec40dd0797",
+    "resourceNameTruncated": "projecd0ba67cd",
     "userPoolName": "project",
     "autoVerifiedAttributes": [
       "phone_number"
@@ -27,18 +27,18 @@
     ],
     "requiredAttributes": [
       "email",
+      "name",
       "phone_number",
-      "birthdate",
-      "name"
+      "birthdate"
     ],
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "projec40dd0797_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "projecd0ba67cd_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "40dd0797",
+    "sharedId": "d0ba67cd",
     "resourceName": "project",
     "authSelections": "identityPoolAndUserPool",
     "serviceName": "Cognito",

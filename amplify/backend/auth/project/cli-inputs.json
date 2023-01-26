@@ -3,65 +3,56 @@
   "cognitoConfig": {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "projec31b9d2b7",
+    "resourceNameTruncated": "projecd0ba67cd",
     "userPoolName": "project",
     "autoVerifiedAttributes": [
-      "email"
+      "phone_number"
     ],
     "mfaConfiguration": "OPTIONAL",
     "mfaTypes": [
       "SMS Text Message",
       "TOTP"
     ],
-    "smsAuthenticationMessage": "Your authentication code is {####}",
-    "smsVerificationMessage": "Your verification code is {####}",
+    "smsAuthenticationMessage": "Your login code is {####}",
+    "smsVerificationMessage": "Verification code: {####}",
     "emailVerificationSubject": "Your verification code",
     "emailVerificationMessage": "Your verification code is {####}",
     "defaultPasswordPolicy": false,
     "passwordPolicyMinLength": 8,
-    "passwordPolicyCharacters": [],
+    "passwordPolicyCharacters": [
+      "Requires Lowercase",
+      "Requires Numbers",
+      "Requires Symbols",
+      "Requires Uppercase"
+    ],
     "requiredAttributes": [
-      "gender",
       "email",
-      "birthdate",
       "name",
-      "phone_number"
+      "phone_number",
+      "birthdate"
     ],
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "projec31b9d2b7_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "projecd0ba67cd_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "31b9d2b7",
+    "sharedId": "d0ba67cd",
     "resourceName": "project",
     "authSelections": "identityPoolAndUserPool",
     "serviceName": "Cognito",
     "usernameAttributes": [
-      "email"
+      "email",
+      "phone_number"
     ],
-    "useDefault": "default",
+    "useDefault": "manual",
     "userPoolGroups": false,
     "userPoolGroupList": [],
     "adminQueries": false,
-    "hostedUI": false,
+    "thirdPartyAuth": false,
+    "authProviders": [],
     "usernameCaseSensitive": false,
-    "useEnabledMfas": true,
-    "authRoleArn": {
-      "Fn::GetAtt": [
-        "AuthRole",
-        "Arn"
-      ]
-    },
-    "unauthRoleArn": {
-      "Fn::GetAtt": [
-        "UnauthRole",
-        "Arn"
-      ]
-    },
-    "breakCircularDependency": true,
-    "dependsOn": [],
-    "authProviders": []
+    "useEnabledMfas": true
   }
 }

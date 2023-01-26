@@ -20,9 +20,9 @@
         },
         "signupAttributes": [
           "EMAIL",
+          "NAME",
           "PHONE_NUMBER",
-          "BIRTHDATE",
-          "NAME"
+          "BIRTHDATE"
         ],
         "socialProviders": [],
         "usernameAttributes": [

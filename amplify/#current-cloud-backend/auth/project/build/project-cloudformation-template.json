@@ -159,7 +159,7 @@
               ],
               "Condition": {
                 "StringEquals": {
-                  "sts:ExternalId": "projec40dd0797_role_external_id"
+                  "sts:ExternalId": "projecd0ba67cd_role_external_id"
                 }
               }
             }
@@ -179,18 +179,18 @@
                 }
               ]
             },
-            "PolicyName": "projec40dd0797-sns-policy"
+            "PolicyName": "projecd0ba67cd-sns-policy"
           }
         ],
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "projec40dd0797_sns-role",
+            "projecd0ba67cd_sns-role",
             {
               "Fn::Join": [
                 "",
                 [
-                  "sns40dd0797",
+                  "snsd0ba67cd",
                   {
                     "Fn::Select": [
                       3,
@@ -247,6 +247,11 @@
           },
           {
             "Mutable": true,
+            "Name": "name",
+            "Required": true
+          },
+          {
+            "Mutable": true,
             "Name": "phone_number",
             "Required": true
           },
@@ -254,18 +259,13 @@
             "Mutable": true,
             "Name": "birthdate",
             "Required": true
-          },
-          {
-            "Mutable": true,
-            "Name": "name",
-            "Required": true
           }
         ],
         "SmsAuthenticationMessage": {
           "Ref": "smsAuthenticationMessage"
         },
         "SmsConfiguration": {
-          "ExternalId": "projec40dd0797_role_external_id",
+          "ExternalId": "projecd0ba67cd_role_external_id",
           "SnsCallerArn": {
             "Fn::GetAtt": [
               "SNSRole",
@@ -320,7 +320,7 @@
         "UserPoolId": {
           "Ref": "UserPool"
         },
-        "ClientName": "projec40dd0797_app_clientWeb",
+        "ClientName": "projecd0ba67cd_app_clientWeb",
         "RefreshTokenValidity": {
           "Ref": "userpoolClientRefreshTokenValidity"
         },
@@ -338,7 +338,7 @@
         "UserPoolId": {
           "Ref": "UserPool"
         },
-        "ClientName": "projec40dd0797_app_client",
+        "ClientName": "projecd0ba67cd_app_client",
         "GenerateSecret": {
           "Ref": "userpoolClientGenerateSecret"
         },
@@ -378,7 +378,7 @@
               "Fn::Join": [
                 "",
                 [
-                  "upClientLambdaRole40dd0797",
+                  "upClientLambdaRoled0ba67cd",
                   {
                     "Fn::Select": [
                       3,
@@ -446,7 +446,7 @@
             }
           ]
         },
-        "PolicyName": "projec40dd0797_userpoolclient_lambda_iam_policy",
+        "PolicyName": "projecd0ba67cd_userpoolclient_lambda_iam_policy",
         "Roles": [
           {
             "Ref": "UserPoolClientRole"
@@ -489,7 +489,7 @@
             }
           ]
         },
-        "PolicyName": "projec40dd0797_userpoolclient_lambda_log_policy",
+        "PolicyName": "projecd0ba67cd_userpoolclient_lambda_log_policy",
         "Roles": [
           {
             "Ref": "UserPoolClientRole"
