@@ -98,11 +98,8 @@
     "adminQueries": {
       "Type": "String"
     },
-    "thirdPartyAuth": {
+    "hostedUI": {
       "Type": "String"
-    },
-    "authProviders": {
-      "Type": "CommaDelimitedList"
     },
     "usernameCaseSensitive": {
       "Type": "String"
@@ -122,9 +119,8 @@
     "dependsOn": {
       "Type": "CommaDelimitedList"
     },
-    "hostedUIProviderCreds": {
-      "Type": "String",
-      "NoEcho": true
+    "authProviders": {
+      "Type": "CommaDelimitedList"
     }
   },
   "Conditions": {
@@ -163,7 +159,7 @@
               ],
               "Condition": {
                 "StringEquals": {
-                  "sts:ExternalId": "projec40dd0797_role_external_id"
+                  "sts:ExternalId": "projec31b9d2b7_role_external_id"
                 }
               }
             }
@@ -183,18 +179,18 @@
                 }
               ]
             },
-            "PolicyName": "projec40dd0797-sns-policy"
+            "PolicyName": "projec31b9d2b7-sns-policy"
           }
         ],
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "projec40dd0797_sns-role",
+            "projec31b9d2b7_sns-role",
             {
               "Fn::Join": [
                 "",
                 [
-                  "sns40dd0797",
+                  "sns31b9d2b7",
                   {
                     "Fn::Select": [
                       3,
@@ -223,8 +219,14 @@
       "Type": "AWS::Cognito::UserPool",
       "Properties": {
         "AutoVerifiedAttributes": [
-          "phone_number"
+          "email"
         ],
+        "EmailVerificationMessage": {
+          "Ref": "emailVerificationMessage"
+        },
+        "EmailVerificationSubject": {
+          "Ref": "emailVerificationSubject"
+        },
         "EnabledMfas": [
           "SMS_MFA",
           "SOFTWARE_TOKEN_MFA"
@@ -237,21 +239,21 @@
             "MinimumLength": {
               "Ref": "passwordPolicyMinLength"
             },
-            "RequireLowercase": true,
-            "RequireNumbers": true,
-            "RequireSymbols": true,
-            "RequireUppercase": true
+            "RequireLowercase": false,
+            "RequireNumbers": false,
+            "RequireSymbols": false,
+            "RequireUppercase": false
           }
         },
         "Schema": [
           {
             "Mutable": true,
-            "Name": "email",
+            "Name": "gender",
             "Required": true
           },
           {
             "Mutable": true,
-            "Name": "phone_number",
+            "Name": "email",
             "Required": true
           },
           {
@@ -263,13 +265,18 @@
             "Mutable": true,
             "Name": "name",
             "Required": true
+          },
+          {
+            "Mutable": true,
+            "Name": "phone_number",
+            "Required": true
           }
         ],
         "SmsAuthenticationMessage": {
           "Ref": "smsAuthenticationMessage"
         },
         "SmsConfiguration": {
-          "ExternalId": "projec40dd0797_role_external_id",
+          "ExternalId": "projec31b9d2b7_role_external_id",
           "SnsCallerArn": {
             "Fn::GetAtt": [
               "SNSRole",
@@ -282,7 +289,7 @@
         },
         "UserAttributeUpdateSettings": {
           "AttributesRequireVerificationBeforeUpdate": [
-            "phone_number"
+            "email"
           ]
         },
         "UsernameAttributes": {
@@ -324,7 +331,7 @@
         "UserPoolId": {
           "Ref": "UserPool"
         },
-        "ClientName": "projec40dd0797_app_clientWeb",
+        "ClientName": "projec31b9d2b7_app_clientWeb",
         "RefreshTokenValidity": {
           "Ref": "userpoolClientRefreshTokenValidity"
         },
@@ -342,7 +349,7 @@
         "UserPoolId": {
           "Ref": "UserPool"
         },
-        "ClientName": "projec40dd0797_app_client",
+        "ClientName": "projec31b9d2b7_app_client",
         "GenerateSecret": {
           "Ref": "userpoolClientGenerateSecret"
         },
@@ -382,7 +389,7 @@
               "Fn::Join": [
                 "",
                 [
-                  "upClientLambdaRole40dd0797",
+                  "upClientLambdaRole31b9d2b7",
                   {
                     "Fn::Select": [
                       3,
@@ -450,7 +457,7 @@
             }
           ]
         },
-        "PolicyName": "projec40dd0797_userpoolclient_lambda_iam_policy",
+        "PolicyName": "projec31b9d2b7_userpoolclient_lambda_iam_policy",
         "Roles": [
           {
             "Ref": "UserPoolClientRole"
@@ -493,7 +500,7 @@
             }
           ]
         },
-        "PolicyName": "projec40dd0797_userpoolclient_lambda_log_policy",
+        "PolicyName": "projec31b9d2b7_userpoolclient_lambda_log_policy",
         "Roles": [
           {
             "Ref": "UserPoolClientRole"
