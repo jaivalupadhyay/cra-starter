@@ -42,7 +42,7 @@ export default function NavBar(props) {
         alignSelf="stretch"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Logo29767073")}
+        {...getOverrideProps(overrides, "Logo")}
       >
         <Icon
           width="18px"
@@ -82,8 +82,8 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Logo"
-          {...getOverrideProps(overrides, "Logo29767075")}
+          children="Workflow"
+          {...getOverrideProps(overrides, "Workflow")}
         ></Text>
       </Flex>
       <Flex
@@ -119,8 +119,8 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Dashboard"
-          {...getOverrideProps(overrides, "Dashboard")}
+          children="Discover"
+          {...getOverrideProps(overrides, "Discover")}
         ></Text>
         <Text
           fontFamily="Inter"
@@ -185,8 +185,8 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Company"
-          {...getOverrideProps(overrides, "Company")}
+          children="Companies"
+          {...getOverrideProps(overrides, "Companies")}
         ></Text>
       </Flex>
       <Flex
@@ -204,8 +204,8 @@ export default function NavBar(props) {
         {...getOverrideProps(overrides, "Frame 32129767081")}
       >
         <SearchField
+          placeholder="Search..."
           shrink="0"
-          placeholder="Placeholder"
           size="default"
           isDisabled={false}
           labelHidden={true}

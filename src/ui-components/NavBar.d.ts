@@ -10,14 +10,14 @@ import { FlexProps, IconProps, ImageProps, SearchFieldProps, TextProps, ViewProp
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type NavBarOverridesProps = {
     NavBar?: PrimitiveOverrideProps<FlexProps>;
-    Logo29767073?: PrimitiveOverrideProps<FlexProps>;
+    Logo?: PrimitiveOverrideProps<FlexProps>;
     "Star 1"?: PrimitiveOverrideProps<IconProps>;
-    Logo29767075?: PrimitiveOverrideProps<TextProps>;
+    Workflow?: PrimitiveOverrideProps<TextProps>;
     "Frame 32129767076"?: PrimitiveOverrideProps<FlexProps>;
-    Dashboard?: PrimitiveOverrideProps<TextProps>;
+    Discover?: PrimitiveOverrideProps<TextProps>;
     Jobs?: PrimitiveOverrideProps<TextProps>;
     Applicants?: PrimitiveOverrideProps<TextProps>;
-    Company?: PrimitiveOverrideProps<TextProps>;
+    Companies?: PrimitiveOverrideProps<TextProps>;
     "Frame 32129767081"?: PrimitiveOverrideProps<FlexProps>;
     SearchField?: PrimitiveOverrideProps<SearchFieldProps>;
     Icon?: PrimitiveOverrideProps<ViewProps>;

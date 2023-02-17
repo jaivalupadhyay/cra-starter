@@ -213,8 +213,8 @@ export default function EditProfile(props) {
             {...getOverrideProps(overrides, "TextField29766923")}
           ></TextField>
           <TextField
-            label="Gender"
-            placeholder="Male"
+            label="Email"
+            placeholder="john.doe@awsamplify.com"
             width="unset"
             shrink="0"
             alignSelf="stretch"
